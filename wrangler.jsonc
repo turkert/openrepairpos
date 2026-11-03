@@ -1,0 +1,31 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "openrepairpos",
+  "main": "src/worker.mjs",
+  "compatibility_date": "2026-10-01",
+  "compatibility_flags": ["nodejs_compat"],
+
+  // The web app's files. Everything except these paths is served straight from Cloudflare's edge.
+  "assets": {
+    "directory": "./public",
+    "binding": "ASSETS",
+    "html_handling": "none",
+    "run_worker_first": ["/api/*", "/mcp", "/mcp/*", "/track/*", "/health"]
+  },
+
+  // The shop's database: a Durable Object with built-in SQLite (free plan friendly, nothing to provision).
+  "durable_objects": {
+    "bindings": [{ "name": "SHOP", "class_name": "Shop" }]
+  },
+  "migrations": [{ "tag": "v1", "new_sqlite_classes": ["Shop"] }],
+
+  "vars": {
+    // Password hashing strength (PBKDF2-SHA256). Runs inside the Durable Object, which has a generous CPU budget.
+    "PASSWORD_ITERATIONS": "100000"
+  },
+
+  // Optional notifications — add as secrets in the Cloudflare dashboard (Workers → openrepairpos → Settings → Variables):
+  //   SETUP_CODE, RESEND_API_KEY, EMAIL_FROM, TWILIO_SID, TWILIO_TOKEN, TWILIO_FROM, NOTIFY_WEBHOOK_URL, WEBHOOK_SECRET
+
+  "observability": { "enabled": true }
+}

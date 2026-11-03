@@ -1,0 +1,12 @@
+services:
+  openrepairpos:
+    build: .
+    # image: ghcr.io/turkert/openrepairpos:latest   # once published
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./data:/data          # your database lives here — back this folder up
+    env_file:
+      - path: .env
+        required: false   # copy .env.example to .env for email/SMS
+    restart: unless-stopped

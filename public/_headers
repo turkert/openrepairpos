@@ -1,0 +1,7 @@
+# Cloudflare serves files in public/ directly. These are the same security headers the app adds
+# to its own responses (src/app.js SECURITY_HEADERS); keep the two in sync.
+/*
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: same-origin
+  X-Frame-Options: SAMEORIGIN
+  Content-Security-Policy: default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self'; frame-ancestors 'self'; base-uri 'none'; form-action 'self'; object-src 'none'
