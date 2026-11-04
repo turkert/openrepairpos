@@ -78,7 +78,8 @@ A Cloudflare install is a copy in the shop's GitHub account. It does **not** upd
 ### Point of sale and invoices
 - Product tiles, search and barcode scanning (any USB/Bluetooth scanner that types).
 - Edit quantity and price, discount, sales tax (one shop-wide rate, with per-item taxable/non-taxable).
-- Payment methods: cash (with change calculation), card, bank transfer, store credit, other. Payments are *recorded* here; card processing happens on the shop's own terminal.
+- Payment methods: cash (with change calculation), card, bank transfer, store credit, other.
+- **Card payments by design:** cards run on the shop's own terminal, so the shop keeps its processor and rates, and card numbers never enter OpenRepairPOS (no card data to protect, no processor lock-in). The payment is then recorded here. Public wording: present this as a benefit, not as a missing feature (owner decision 2026-11-04).
 - Partial payments and unpaid invoices. One-click invoice from a ticket.
 - Print or save as PDF through the browser.
 - Void an invoice: retail stock returns, store credit is refunded, deposits go back to the ticket. Cash/card refunds are flagged for the shop to handle.
@@ -153,7 +154,6 @@ Any modern browser on a PC, Mac, tablet or phone. There's no app to install. The
 ## What we're working on (not available yet)
 
 Don't claim these as available. Public wording: **"We're working on it."** Never give dates.
-- Card terminal integration (Stripe Terminal, Square) or online payment links.
 - Loyalty points and gift cards.
 - Online booking widget or repair-quote widget for the shop's website.
 - Self check-in kiosk or a separate customer-facing display (signatures are collected on the shop's own screen).
@@ -172,14 +172,13 @@ Don't claim these as available. Public wording: **"We're working on it."** Never
 
 1. Update notice and one-click update for Cloudflare installs.
 2. Online booking and repair-quote widget.
-3. Card payments and payment links.
-4. Loyalty points and gift cards.
-5. Kiosk / self check-in.
-6. Buyback / trade-in.
-7. Multi-location.
-8. QuickBooks / Xero export.
-9. Live Parts4Cells catalog and cart.
-10. Translations.
+3. Loyalty points and gift cards.
+4. Kiosk / self check-in.
+5. Buyback / trade-in.
+6. Multi-location.
+7. QuickBooks / Xero export.
+8. Live Parts4Cells catalog and cart.
+9. Translations.
 
 ## Wording rules for marketing
 

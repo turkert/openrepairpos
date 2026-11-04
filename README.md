@@ -128,7 +128,6 @@ No front-end framework and no build step on purpose: open `public/app.js`, chang
 Contributions welcome. Planned next:
 
 - Online booking widget for shop websites and a public repair-quote widget
-- Card terminal integrations (Stripe Terminal, Square) and online payment links
 - Loyalty points and gift cards
 - Self check-in kiosk mode and customer-facing display
 - Device buyback / trade-in with serialized resale
