@@ -101,7 +101,8 @@ const DEFAULT_SETTINGS = {
   terms: 'We are not responsible for data loss. Devices not collected within 60 days may be recycled. Repairs carry a warranty on parts and labor for the stated period; physical or liquid damage voids warranty.',
   public_url: '',
   p4c_enabled: true,
-  p4c_search_url: 'https://parts4cells.com/catalogsearch/result/?q={query}',
+  // The utm_* tag only names the source of the visit (OpenRepairPOS). It carries nothing about the shop.
+  p4c_search_url: 'https://parts4cells.com/catalogsearch/result/?q={query}&utm_source=openrepairpos&utm_medium=referral&utm_campaign=app_parts_links',
   p4c_account_email: '',
   repair_types: ['Screen replacement', 'Battery replacement', 'Charging port', 'Back glass', 'Camera', 'Water damage', 'Diagnostics', 'Data recovery', 'Software', 'Other'],
   ticket_custom_fields: [],      // extra fields on every ticket, e.g. ["VIN", "Mileage", "Color"]

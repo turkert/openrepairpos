@@ -5,7 +5,7 @@ The single source of truth for what OpenRepairPOS is and does. The website, guid
 - **Version described:** 0.5.0
 - **Last checked against the code:** 2026-11-03
 - **Website:** https://openrepairpos.com
-- **Source code:** https://github.com/turkert/openrepairpos *(repository not yet published)*
+- **Source code:** https://github.com/turkert/openrepairpos
 - **License:** MIT (free to use, change and share, including commercially)
 - **Made by:** OpenRepairPOS, an independent open-source project (MIT), maintained by its contributors. The app includes a built-in Parts4Cells reorder integration that cannot be switched off (owner decision 2026-11-03); the maintainers have a working relationship with Parts4Cells, which is disclosed on the website's disclosure page.
 
@@ -94,7 +94,7 @@ A Cloudflare install is a copy in the shop's GitHub account. It does **not** upd
 - Serial/IMEI numbers per item.
 - Stock count screen. CSV import.
 - Purchase orders: create, mark ordered, receive in full or in part. Receiving updates stock and cost.
-- **Parts4Cells reorder list:** low-stock items with suggested quantities and a "Find on Parts4Cells" link each, a downloadable order list, and one click to turn them into a purchase order. It links to Parts4Cells' search; it doesn't place orders or check live prices or stock.
+- **Parts4Cells reorder list:** low-stock items with suggested quantities and a "Find on Parts4Cells" link each, a downloadable order list, and one click to turn them into a purchase order. It links to Parts4Cells' search; it doesn't place orders or check live prices or stock. The links carry a fixed tag (`utm_source=openrepairpos&utm_medium=referral&utm_campaign=app_parts_links`) so Parts4Cells can count visits from the app; the tag is the same for every shop and identifies no one (owner decision 2026-11-04). The app's Referrer-Policy is same-origin, so the shop's address isn't sent either.
 
 ### Appointments
 - Two-week planner. Book, mark done, cancel. Bookings can also come from an AI assistant.
@@ -188,5 +188,5 @@ Don't claim these as available. Public wording: **"We're working on it."** Never
 - **Don't name competitors** on the website or in marketing. Compare against "a typical paid repair POS" / "one of the most widely used paid repair-shop systems", using that vendor's own published pages, dated, with the evidence kept in `operations/research/` (private).
 - Don't use competitors' names, logos, screenshots or wording.
 - **Independent project:** don't present OpenRepairPOS as a Parts4Cells product or say it is sponsored by Parts4Cells. Do keep the disclosure: the app has built-in Parts4Cells reorder links (always on; buying through them is optional, any supplier can be used) and the maintainers have a working relationship with Parts4Cells.
-- **Zero data collection:** the app sends no analytics, usage data, owner emails or shop data to the project or anyone else (owner decision 2026-11-03). Never add telemetry without changing this file and the website first.
+- **Zero data collection:** the app sends no analytics, usage data, owner emails or shop data to the project or anyone else (owner decision 2026-11-03). Never add telemetry without changing this file and the website first. The fixed utm tag on Parts4Cells links is not telemetry: the app sends nothing; it only labels the link the shop chooses to click.
 - Missing features: say **"We're working on it"**, never a date.

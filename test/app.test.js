@@ -170,6 +170,12 @@ test('setup, tickets, inventory, invoices, MCP', async (t) => {
     assert.ok(st.p4c_search_url.startsWith('https://parts4cells.com/'));
     const list = (await call('GET', '/api/parts-order-list')).body;
     assert.ok(list.length && list.every((r) => r.parts4cells_url.startsWith('https://parts4cells.com/')));
+    // Links carry only a fixed source tag, never anything about the shop.
+    for (const r of list) {
+      const u = new URL(r.parts4cells_url);
+      assert.deepEqual([...u.searchParams.keys()].sort(), ['q', 'utm_campaign', 'utm_medium', 'utm_source']);
+      assert.equal(u.searchParams.get('utm_source'), 'openrepairpos');
+    }
   });
 
   await t.test('sign out ends the session', async () => {

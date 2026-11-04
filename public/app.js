@@ -805,7 +805,7 @@ async function pageSettings(el, tab = 'store') {
     t.innerHTML = `<form class="card p4c" id="sf"><h2>Parts4Cells</h2><p>OpenRepairPOS includes reorder links to Parts4Cells, a Houston, Texas wholesaler of phone and tablet replacement parts. Low-stock items get a "Find on Parts4Cells" link and purchase orders suggest Parts4Cells as the supplier. You can still buy from any supplier: just type its name on the purchase order or item.</p>
       ${field('Your Parts4Cells account email (optional, for your reference)', inp('p4c_account_email', S.p4c_account_email, 'type="email"'))}
       <div class="row"><button class="btn primary">Save</button><a class="btn" href="https://parts4cells.com" target="_blank" rel="noopener">Open Parts4Cells ↗</a></div>
-      <p class="small muted">Tip: store the Parts4Cells SKU in each item's “Supplier SKU” field for exact matches. Nothing about your shop is sent to Parts4Cells.</p></form>`;
+      <p class="small muted">Tip: store the Parts4Cells SKU in each item's “Supplier SKU” field for exact matches. Nothing about your shop is sent to Parts4Cells. The links include a tag (utm_source=openrepairpos) so Parts4Cells can see a visit came from OpenRepairPOS; it doesn't identify your shop.</p></form>`;
     $('#sf').onsubmit = saveForm($('#sf'), ['p4c_account_email']);
   }
 
