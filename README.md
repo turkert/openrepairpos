@@ -133,8 +133,6 @@ Contributions welcome. Planned next:
 - Device buyback / trade-in with serialized resale
 - Multi-location stock and transfers
 - QuickBooks / Xero export
-- Parts4Cells live catalog and cart integration
-- Translations
 
 ## License
 

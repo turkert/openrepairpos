@@ -147,7 +147,7 @@ OpenRepairPOS includes an MCP server, the standard way AI assistants connect to 
 - Reviewed before release for business-logic, security and usability bugs, plus a final independent launch review (2026-11-03). All confirmed issues were fixed and are covered by automated tests.
 
 ### Runs on
-Any modern browser on a PC, Mac, tablet or phone. There's no app to install. The layout works down to phone width.
+Any modern browser on a PC, Mac, tablet or phone. There's no app to install. The layout works down to phone width. The app is in English.
 
 ---
 
@@ -164,8 +164,6 @@ Don't claim these as available. Public wording: **"We're working on it."** Never
 - AI phone receptionist.
 - Offline mode, native mobile apps.
 - Automatic updates for Cloudflare installs.
-- Translations (English only).
-- Live Parts4Cells catalog, prices, stock or ordering inside the app.
 - Multiple tax rates per sale.
 
 ## Roadmap (planned, not promised)
@@ -177,8 +175,6 @@ Don't claim these as available. Public wording: **"We're working on it."** Never
 5. Buyback / trade-in.
 6. Multi-location.
 7. QuickBooks / Xero export.
-8. Live Parts4Cells catalog and cart.
-9. Translations.
 
 ## Wording rules for marketing
 
