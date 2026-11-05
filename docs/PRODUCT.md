@@ -185,8 +185,8 @@ Don't claim these as available. Public wording: **"We're working on it."** Never
 - Say **"free and open source"**. Don't say "free forever" or make promises about future pricing.
 - Say **"runs in your own free Cloudflare account"**. Mention that a GitHub account is also needed.
 - Say **"works with Claude and ChatGPT"** with the plan notes above. Don't claim support for other assistants unless tested.
-- **Don't name competitors** on the website or in marketing. Compare against "a typical paid repair POS" / "one of the most widely used paid repair-shop systems", using that vendor's own published pages, dated, with the evidence kept in `operations/research/` (private).
-- Don't use competitors' names, logos, screenshots or wording.
+- **Competitors:** on product pages (home, features, pricing, install) don't name competitors; compare against "a typical paid repair POS". The **blog** may name competitors (owner decision 2026-11-05): say nothing promotional about them, compare on criteria where OpenRepairPOS truly wins, take every competitor price or limit from the vendor's own page with the date checked (evidence in `operations/research/`), never state anything false or misleading, and list what OpenRepairPOS doesn't have yet plainly.
+- Don't use competitors' logos, screenshots or wording.
 - **Independent project:** don't present OpenRepairPOS as a Parts4Cells product or say it is sponsored by Parts4Cells. Do keep the disclosure: the app has built-in Parts4Cells reorder links (always on; buying through them is optional, any supplier can be used) and the maintainers have a working relationship with Parts4Cells.
 - **Zero data collection:** the app sends no analytics, usage data, owner emails or shop data to the project or anyone else (owner decision 2026-11-03). Never add telemetry without changing this file and the website first. The fixed utm tag on Parts4Cells links is not telemetry: the app sends nothing; it only labels the link the shop chooses to click.
 - Missing features: say **"We're working on it"**, never a date.
