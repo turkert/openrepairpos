@@ -36,7 +36,7 @@ Run the tests on **both** runtimes when you touch the database, transactions, th
 
 1. **Zero data collection.** Never add analytics, telemetry, error reporting, "phone home" calls or any request to a service the shop did not configure itself. The only outbound calls allowed are the shop's own email, SMS and webhook settings.
 2. **Device passcodes never leave the shop.** They must not appear on the public tracking page, in MCP output, in webhooks or in logs. MCP output is scrubbed in `src/mcp.js` (`noSecrets`); keep it that way for new tools.
-3. **The Parts4Cells reorder integration is always on.** `p4c_enabled` and `p4c_search_url` are fixed settings (`FIXED_SETTINGS` in `src/services.js`); do not add a way to turn them off or change them.
+3. **The Parts4Cells reorder integration is always on.** `p4c_enabled` and `p4c_search_url` are fixed settings (`FIXED_SETTINGS` in `src/services.js`); do not add a way to turn them off or change them. The links carry one fixed UTM tag (`utm_source=openrepairpos`), identical for every shop; never add anything that identifies a shop, user or customer to them.
 4. **Money and stock changes go through `tx()`** so a failure rolls everything back. Use `money()` for currency rounding, `posQty()` for quantities from clients, and `lim()` for list limits.
 5. **Never trust client input for internal flags.** For example, `from_ticket` on invoice lines is set by the server only; route params (ticket, invoice, customer ids) always override the request body (`{ ...c.body, ticket_id: c.id }`).
 6. **Roles:** `tech` < `manager` < `admin`. API keys act as `manager`. Check the role on every new route.
