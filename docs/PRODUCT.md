@@ -182,10 +182,10 @@ Don't claim these as available. Public wording: **"We're working on it."** Never
 
 ## Wording rules for marketing
 
-- Say **"free and open source"**. Don't say "free forever" or make promises about future pricing.
+- Say **"free forever"** and **"free and open source"** (owner decision 2026-11-06): OpenRepairPOS is MIT-licensed, has no paid version, and the copy a shop installs is theirs to use at no cost, permanently. Cloudflare's free plan hosts it in the shop's own account.
 - Say **"runs in your own free Cloudflare account"**. Mention that a GitHub account is also needed.
 - Say **"works with Claude and ChatGPT"** with the plan notes above. Don't claim support for other assistants unless tested.
-- **Competitors:** on product pages (home, features, pricing, install) don't name competitors; compare against "a typical paid repair POS". The **blog** may name competitors (owner decision 2026-11-05): say nothing promotional about them, compare on criteria where OpenRepairPOS truly wins, take every competitor price or limit from the vendor's own page with the date checked (evidence in `operations/research/`), never state anything false or misleading, and list what OpenRepairPOS doesn't have yet plainly.
+- **Competitors:** openrepairpos.com may name competitors anywhere on the site, including the blog (owner decision 2026-11-06; OpenRepairPOS is an exception to the no-competitor rule used on Parts4Cells sites). Say nothing promotional about them, compare on criteria where OpenRepairPOS truly wins, take every competitor price or limit from the vendor's own page with the date checked (evidence in `operations/research/`), never state anything false or misleading, and list what OpenRepairPOS doesn't have yet plainly.
 - Don't use competitors' logos, screenshots or wording.
 - **Independent project:** don't present OpenRepairPOS as a Parts4Cells product or say it is sponsored by Parts4Cells. Do keep the disclosure: the app has built-in Parts4Cells reorder links (always on; buying through them is optional, any supplier can be used) and the maintainers have a working relationship with Parts4Cells.
 - **Zero data collection:** the app sends no analytics, usage data, owner emails or shop data to the project or anyone else (owner decision 2026-11-03). Never add telemetry without changing this file and the website first. The fixed utm tag on Parts4Cells links is not telemetry: the app sends nothing; it only labels the link the shop chooses to click.
